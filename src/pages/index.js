@@ -38,8 +38,8 @@ export default function Home() {
     // If user is not connected to the Goerli network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 11155111) {
-      window.alert("Change the network to Goerli");
-      throw new Error("Change network to Goerli");
+      window.alert("Change the network to Sepolia");
+      throw new Error("Change network to Sepolia");
     }
 
     if (needSigner) {
@@ -210,7 +210,7 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./crypto-devs.svg" />
+          <img className={styles.image} src="../../public/crypto-devs.svg" />
         </div>
       </div>
 
